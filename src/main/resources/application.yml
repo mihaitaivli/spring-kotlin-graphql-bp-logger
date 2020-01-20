@@ -1,0 +1,5 @@
+graphql:
+  packages: "graphql"
+
+server:
+  port: 8000
