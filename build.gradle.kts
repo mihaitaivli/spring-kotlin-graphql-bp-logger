@@ -25,7 +25,6 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 	implementation("com.expediagroup:graphql-kotlin-spring-server:1.4.2")
-	implementation("com.expediagroup:graphql-kotlin-schema-generator:1.0.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}

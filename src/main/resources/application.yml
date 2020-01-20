@@ -1,5 +1,5 @@
 graphql:
-  packages: "graphql"
+  packages: "uk.co.ivli.bplogger.graphql"
 
 server:
   port: 8000
