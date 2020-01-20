@@ -1,21 +1,22 @@
 package uk.co.ivli.bplogger.graphql
 
 import com.expediagroup.graphql.spring.operations.Query
+import graphql.schema.DataFetchingEnvironment
 import org.springframework.stereotype.Component
 import org.springframework.stereotype.Repository
 
 @Component
 class CustomerQuery : Query {
-  fun getRecords():  List<Record> = listOf()
-}
+  suspend fun getRecords(environment: DataFetchingEnvironment):  List<Record> = emptyList()
+  suspend fun getRecord(environment: DataFetchingEnvironment, recordId: Int): Record? = Record(
+		customer = Customer(customerId = "1", firstName = "Me", records = listOf()),
+		systolic = "140",
+		diastolic = "80"
+    )}
 
 data class Customer (
   val customerId: String,
   val firstName: String,
-  val middleNames: String? = null,
-  val lastName: String? = null,
-  val dateOfBirth : String? = null,
-  val email: String? = null,
   val records: List<Record?>
 )
 

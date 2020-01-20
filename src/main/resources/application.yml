@@ -1,5 +1,7 @@
 graphql:
   packages: "uk.co.ivli.bplogger.graphql"
+  playground:
+    enabled: true
 
 server:
-  port: 8000
+  port: 8008
