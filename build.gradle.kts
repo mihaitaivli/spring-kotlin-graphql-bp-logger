@@ -29,6 +29,7 @@ implementation("org.springframework.boot:spring-boot-starter-webflux")
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
 	testImplementation("io.projectreactor:reactor-test")
+	testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
 //	testImplementation("org.springframework.security:spring-security-test")
 }
 
