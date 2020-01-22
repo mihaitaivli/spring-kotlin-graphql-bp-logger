@@ -1,0 +1,9 @@
+version: '3.1'
+
+services:
+  bp-local-mongo:
+    image: mongo
+    ports:
+    - '27017:27017'
+    volumes:
+    - './localData:/data/db'

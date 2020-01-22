@@ -6,21 +6,21 @@ import org.springframework.stereotype.Component
 
 @Component
 class CustomerQuery : Query {
-  suspend fun getRecords(environment: DataFetchingEnvironment): List<Record> = emptyList()
-  suspend fun getRecord(environment: DataFetchingEnvironment, recordId: Int): Record? = Record(
-        customer = Customer(customerId = "1", firstName = "Me", records = listOf()),
-        systolic = "140",
-        diastolic = "80"
+  suspend fun records(environment: DataFetchingEnvironment): List<Record> = emptyList()
+  suspend fun record(environment: DataFetchingEnvironment, recordId: Int): Record? = Record(
+        customer = Customer(customerId = "1", name = "Me Myself", records = listOf()),
+        systolic = 140,
+        diastolic = 80
     ) }
 
 data class Customer(
     val customerId: String,
-    val firstName: String,
-    val records: List<Record?>
+    val name: String,
+    val records: List<Record>? = emptyList()
 )
 
 data class Record(
-    val customer: Customer,
-    val systolic: String,
-    val diastolic: String
+    val customer: Customer? = null,
+    val systolic: Int,
+    val diastolic: Int
 )

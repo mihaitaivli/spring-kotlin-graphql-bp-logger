@@ -25,11 +25,11 @@ implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 	implementation("com.expediagroup:graphql-kotlin-spring-server:1.4.2")
+	implementation("org.springframework.boot:spring-boot-starter-data-mongodb:2.2.4.RELEASE")
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
 	testImplementation("io.projectreactor:reactor-test")
-	testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
 //	testImplementation("org.springframework.security:spring-security-test")
 }
 
