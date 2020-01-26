@@ -3,7 +3,7 @@ package uk.co.ivli.bplogger.graphql.resolvers.queries
 import com.expediagroup.graphql.spring.operations.Query
 import graphql.schema.DataFetchingEnvironment
 import org.springframework.stereotype.Component
-import uk.co.ivli.bplogger.dao.RecordDAO
+import uk.co.ivli.bplogger.dataAccess.RecordDAO
 import uk.co.ivli.bplogger.graphql.definitions.Record
 
 @Component

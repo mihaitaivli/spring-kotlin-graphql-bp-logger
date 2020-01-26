@@ -10,10 +10,11 @@ import org.springframework.data.mongodb.core.mapping.Document
 data class Customer(
     @Id
     val _id: String,
-    val name: String,
-    val dateOfBirth: String,
-    val registrationDate: String,
-    val email: String,
-    val phone: String,
-    val password: String
+    val customer_id: String,
+    val name: String
+//    val dateOfBirth: String,
+//    val registrationDate: String,
+//    val email: String,
+//    val phone: String,
+//    val password: String
 )
