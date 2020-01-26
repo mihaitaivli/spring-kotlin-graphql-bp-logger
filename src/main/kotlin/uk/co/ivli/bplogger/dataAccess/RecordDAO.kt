@@ -1,5 +1,6 @@
 package uk.co.ivli.bplogger.dataAccess
 
+import org.springframework.data.domain.Example
 import org.springframework.stereotype.Component
 import uk.co.ivli.bplogger.graphql.definitions.Record
 import uk.co.ivli.bplogger.graphql.definitions.input.RecordsSortBy
@@ -20,7 +21,12 @@ class RecordDAO(
       before: String?,
       after: String?
     ) :List<Record>? {
-      return if (where != null) emptyList()
-      else recordRepository.findAll()
+      if (where?.systolic != null) {
+        return recordRepository.findAllBySystolic(where.systolic)
+      } else if (where?.diastolic != null) {
+        return recordRepository.findAllByDiastolic(where.diastolic)
+      } else {
+        return recordRepository.findAll()
+      }
     }
 }

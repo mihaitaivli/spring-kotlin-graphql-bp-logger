@@ -7,4 +7,7 @@ import uk.co.ivli.bplogger.graphql.definitions.input.RecordsSortBy
 import uk.co.ivli.bplogger.graphql.definitions.input.RecordsWhere
 
 @Repository
-interface RecordRepository : MongoRepository<Record, String>
+interface RecordRepository : MongoRepository<Record, String> {
+  fun findAllBySystolic(systolic: Int): List<Record>
+  fun findAllByDiastolic(diastolic: Int): List<Record>
+}
